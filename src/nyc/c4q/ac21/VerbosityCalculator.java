@@ -11,18 +11,23 @@ public class VerbosityCalculator {
     public static void main(String[] args){
 
         // An abstract representation of a File
-        File file = new File("PATH to text file");
+        File Dickens = new File("/Users/c4q-sarahkim/Desktop/accesscode/VerbosityCalculator/resources/Charles_Dickens'_A_Tale_of_Two_Cities.txt");
+        File Melville = new File("/Users/c4q-sarahkim/Desktop/accesscode/VerbosityCalculator/resources/Hermal Melville's Moby Dick.txt");
 
+        //count the words
         try{
-            Scanner sc = new Scanner(file);
-            /**
-             *  Your CODE goes here
-             *
-             *
-             *
-             *
-             */
+            Scanner readDickens = new Scanner(Dickens);
+            Scanner readMelville = new Scanner(Melville);
 
+            int countWords = 0;
+            String story = "";
+
+            while (readDickens.hasNext()) {
+                story = readDickens.next();
+                countWords++;
+            }
+
+            System.out.println(countWords);
         }
         catch (FileNotFoundException e){
             e.printStackTrace();
